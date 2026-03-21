@@ -94,9 +94,23 @@ nav {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
     gap: 20px;
     margin-top: 30px;
+}
+
+/* Tablet view */
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile view */
+@media (max-width: 500px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
