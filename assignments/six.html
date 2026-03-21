@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 6: Project Roadmap</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #334155;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #38bdf8;
+            color: #0f172a;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e293b;
+        }
+
+        tr:hover {
+            background-color: #334155;
+        }
+
+        .status {
+            font-weight: bold;
+        }
+
+        .completed {
+            color: #22c55e;
+        }
+
+        .in-progress {
+            color: #facc15;
+        }
+
+        .pending {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-main">
+        <h1>Assignment 6</h1>
+        <p>Your Semester Project Roadmap 📊</p>
+    </div>
+</header>
+
+<section class="container">
+
+    <!-- Task -->
+    <div class="card">
+        <h2>Task</h2>
+        <p style="margin-top:10px;">
+            Design a <strong>table</strong> to track your semester projects with:
+        </p>
+
+        <ul style="margin-top:15px; text-align:left;">
+            <li>Project Name</li>
+            <li>Status</li>
+            <li>Deadline</li>
+        </ul>
+    </div>
+
+    <!-- Table -->
+    <div class="card" style="margin-top:30px;">
+        <h2>Example Roadmap</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Status</th>
+                    <th>Deadline</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Front-End Portfolio (FET)</td>
+                    <td class="status in-progress">In Progress</td>
+                    <td>April 10, 2026</td>
+                </tr>
+                <tr>
+                    <td>Database Mini Project (DBMS)</td>
+                    <td class="status pending">Pending</td>
+                    <td>April 20, 2026</td>
+                </tr>
+                <tr>
+                    <td>Operating Systems Case Study</td>
+                    <td class="status completed">Completed</td>
+                    <td>March 30, 2026</td>
+                </tr>
+                <tr>
+                    <td>Design & Analysis of Algorithms Project</td>
+                    <td class="status in-progress">In Progress</td>
+                    <td>April 25, 2026</td>
+                </tr>
+                <tr>
+                    <td>Environmental Studies Report</td>
+                    <td class="status pending">Pending</td>
+                    <td>May 5, 2026</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Navigation -->
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back to Assignments</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
