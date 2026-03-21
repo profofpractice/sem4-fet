@@ -119,6 +119,7 @@ nav {
     border-radius: 10px;
     border: 1px solid #334155;
     transition: border-color 0.3s;
+    cursor: pointer;
 }
 /* Container for all cards */
 .assignment-grid {
