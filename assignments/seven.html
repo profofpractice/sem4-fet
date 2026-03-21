@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7: Hire Me Form</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        form {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 12px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #7dd3fc;
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-main">
+        <h1>Hire Me 💼</h1>
+        <p>Build a professional contact form</p>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <h2>Contact Form</h2>
+
+        <form>
+
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Subject</label>
+            <select>
+                <option>Job Opportunity</option>
+                <option>Freelance Project</option>
+                <option>Collaboration</option>
+            </select>
+
+            <label>Message</label>
+            <textarea rows="5" placeholder="Write your message..."></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+
+        </form>
+    </div>
+
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
