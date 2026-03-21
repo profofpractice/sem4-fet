@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignments</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="hero-container">
     <nav>
         <div class="logo">FrontEnd Pro</div>
@@ -22,13 +24,41 @@
     </div>
 </header>
 
+<!-- CONTENT -->
 <section class="container">
     <h2>All Assignments</h2>
 
-    <!-- SAME GRID STYLE -->
-    <div id="assignment-container" class="grid"></div>
+    <div class="grid">
+
+        <!-- Assignment 1 -->
+        <div class="card" onclick="window.location.href='assignments/one.html'" style="cursor:pointer;">
+            <h3>Assignment 1: Introduction</h3>
+            <p>Build a simple personal introduction page</p>
+        </div>
+
+        <!-- Assignment 2 -->
+        <div class="card" onclick="window.location.href='assignments/two.html'" style="cursor:pointer;">
+            <h3>Assignment 2: Blog Post</h3>
+            <p>Apply colors, fonts, and layouts.</p>
+        </div>
+
+        <!-- Assignment 3 -->
+        <div class="card" onclick="window.location.href='assignments/three.html'" style="cursor:pointer;">
+            <h3>Assignment 3: Image and Frames</h3>
+            <p>Use of image, anchor and frame tags</p>
+        </div>
+
+        <!-- Assignment 4 -->
+        <div class="card" onclick="window.location.href='assignments/four.html'" style="cursor:pointer;">
+            <h3>Assignment 4: Embedding using Iframes</h3>
+            <p>Embed a website and a YouTube video</p>
+        </div>
+
+    </div>
 </section>
 
-<script src="js/assignments.js"></script>
+<!-- OPTIONAL JS (keeps greeting feature if needed) -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
