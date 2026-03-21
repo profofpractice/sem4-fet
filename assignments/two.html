@@ -2,33 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2: The Core of the Web</title>
+
+    <!-- Reuse global styles -->
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <h1>Why the Fundamentals Still Rule in 2026</h1>
-    <p>Published by: [Student Name] | FET Module 2</p>
+<!-- HEADER (CONSISTENT UI) -->
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
 
-    <h2>1. HTML: The Skeleton</h2>
-    <p>Before you can style a site, you must structure it. HTML provides the meaningful 
-       skeleton that search engines and screen readers rely on. Without solid HTML 
-       semantics, a website is just a pile of unorganized data.</p>
+    <div class="hero-main">
+        <h1>Assignment 2</h1>
+        <p>The Core of the Web 💡</p>
+    </div>
+</header>
 
-    <h2>2. CSS: The Skin</h2>
-    <p>CSS is where the design comes to life. Learning the Box Model, selectors, 
-       and positioning allows an engineer to build layouts that are not only 
-       beautiful but also responsive across mobile and desktop devices.</p>
+<!-- CONTENT -->
+<section class="container">
 
-    <h2>3. JavaScript: The Brain</h2>
-    <p>JavaScript turns static pages into interactive applications. It handles the 
-       logic, API calls, and user behavior that modern web users expect. Even with 
-       advanced frameworks like React or Vue, a deep understanding of Vanilla JS 
-       is what separates a coder from an engineer.</p>
+    <div class="card">
+        <h1>Why the Fundamentals Still Rule in 2026</h1>
+        <p style="margin-top:10px; font-size: 0.9rem; color: #94a3b8;">
+            Published by: <strong>[Student Name]</strong> | FET Module 2
+        </p>
 
-    <h3>Final Thoughts</h3>
-    <p>Frameworks come and go, but the syntax and semantics of HTML, CSS, and JS 
-       are the permanent languages of the browser. Master these, and you can 
-       learn anything else in the industry.</p>
+        <!-- SECTION 1 -->
+        <h2 style="margin-top:25px;">1. HTML: The Skeleton</h2>
+        <p>
+            Before you can style a site, you must structure it. HTML provides the meaningful 
+            skeleton that search engines and screen readers rely on. Without solid HTML 
+            semantics, a website is just a pile of unorganized data.
+        </p>
+
+        <!-- SECTION 2 -->
+        <h2 style="margin-top:25px;">2. CSS: The Skin</h2>
+        <p>
+            CSS is where the design comes to life. Learning the Box Model, selectors, 
+            and positioning allows an engineer to build layouts that are not only 
+            beautiful but also responsive across mobile and desktop devices.
+        </p>
+
+        <!-- SECTION 3 -->
+        <h2 style="margin-top:25px;">3. JavaScript: The Brain</h2>
+        <p>
+            JavaScript turns static pages into interactive applications. It handles the 
+            logic, API calls, and user behavior that modern web users expect. Even with 
+            advanced frameworks like React or Vue, a deep understanding of Vanilla JS 
+            is what separates a coder from an engineer.
+        </p>
+
+        <!-- FINAL -->
+        <h3 style="margin-top:25px;">Final Thoughts</h3>
+        <p>
+            Frameworks come and go, but the syntax and semantics of HTML, CSS, and JS 
+            are the permanent languages of the browser. Master these, and you can 
+            learn anything else in the industry.
+        </p>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back to Assignments</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<!-- OPTIONAL JS -->
+<script src="../js/script.js"></script>
 
 </body>
 </html>
