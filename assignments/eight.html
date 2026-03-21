@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8: Tech Quiz</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        form {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            background: #0f172a;
+            color: white;
+            border: 1px solid #334155;
+        }
+
+        .submit-btn {
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-main">
+        <h1>Tech Stack Quiz 🧠</h1>
+        <p>Test your web development knowledge</p>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <form>
+
+            <!-- Radio -->
+            <div class="question">
+                <p>1. Which language structures a webpage?</p>
+                <input type="radio" name="q1"> HTML<br>
+                <input type="radio" name="q1"> CSS<br>
+                <input type="radio" name="q1"> JavaScript
+            </div>
+
+            <!-- Checkbox -->
+            <div class="question">
+                <p>2. Which are CSS frameworks?</p>
+                <input type="checkbox"> Bootstrap<br>
+                <input type="checkbox"> Tailwind<br>
+                <input type="checkbox"> React
+            </div>
+
+            <!-- Textarea -->
+            <div class="question">
+                <p>3. Provide feedback on this code:</p>
+                <textarea rows="4"></textarea>
+            </div>
+
+            <button class="submit-btn">Submit Quiz</button>
+
+        </form>
+    </div>
+
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
