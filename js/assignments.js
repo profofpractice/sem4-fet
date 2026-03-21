@@ -1,11 +1,11 @@
 const assignments = [
     {
-        title: "Assignment 1: The ""Mission Statement"" Hero Section",
-        description: "Create the top section of your professional portfolio. It must use a hierarchy of headings to introduce who you are as an engineer and a paragraph that summarizes your Tech Stack.",
+        title: "Assignment 1: Introduction",
+        description: "Build a simple personal introduction page",
         link: "assignments/one.html"
     },
     {
-        title: "Assignment 2: CSS Styling",
+        title: "Assignment 2: Blog Post",
         description: "Apply colors, fonts, and layouts.",
         link: "assignments/two.html"
     },
