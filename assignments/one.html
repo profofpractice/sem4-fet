@@ -2,18 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Professional Portfolio - Hero Section</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1 - Portfolio</title>
+
+    <!-- Use SAME global CSS -->
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Vijay Hegde</h1>
-        
-        <h2>Professor of Practice / Commerce Architect </h2>
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
 
-        <p>
-            Enjoys sharing knowledge and interacting with students. Make learning experience fun and informative
+    <div class="hero-main">
+        <h1>Assignment 1: Introduction</h1>
+        <p>Build a simple personal introduction page</p>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <h1>Vijay Hegde</h1>
+        <h2>Professor of Practice / Commerce Architect</h2>
+
+        <p style="margin-top:15px;">
+            Enjoys sharing knowledge and interacting with students. 
+            Makes learning experience fun and informative.
         </p>
-    </header>
-    </body>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back to Assignments</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<!-- OPTIONAL: If you later add JS -->
+<script src="../js/script.js"></script>
+
+</body>
 </html>
