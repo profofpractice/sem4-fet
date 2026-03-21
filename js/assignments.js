@@ -15,7 +15,7 @@ const assignments = [
         link: "assignments/three.html"
     }
      {
-        title: "Assignment 4: Embedding",
+        title: "Assignment 4: Embedding using Iframes",
         description: "Embed a website and a youube video",
         link: "assignments/four.html"
     }
