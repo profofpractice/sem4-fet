@@ -10,8 +10,8 @@ const assignments = [
         link: "assignments/two.html"
     },
     {
-        title: "Assignment 3: JavaScript Basics",
-        description: "Build interactive elements.",
+        title: "Assignment 3: Image and Frames",
+        description: "Use of image, anchor and frame tags",
         link: "assignments/three.html"
     }
 ];
