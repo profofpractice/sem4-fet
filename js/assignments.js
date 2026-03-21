@@ -14,6 +14,11 @@ const assignments = [
         description: "Use of image, anchor and frame tags",
         link: "assignments/three.html"
     }
+     {
+        title: "Assignment 4: Embedding",
+        description: "Embed a website and a youube video",
+        link: "assignments/four.html"
+    }
 ];
 
 const container = document.getElementById("assignment-container");
