@@ -7,9 +7,26 @@ let roles = [
 
 let index = 0;
 
-function changeRole() {
+/* function changeRole() {
     index = (index + 1) % roles.length;
     document.getElementById("role").textContent = roles[index];
+} */
+
+function changeRole() {
+    // 1. Ask the user for their new role using a prompt
+    let newRole = prompt("What is your new professional role?", "Full Stack Developer");
+
+    // 2. Check if the user entered something (and didn't hit cancel)
+    if (newRole !== null && newRole !== "") {
+        
+        // 3. Update the HTML element with the id 'role'
+        document.getElementById("role").innerText = newRole;
+
+        // 4. Show a success message using an alert
+        alert("Role updated successfully to: " + newRole);
+    } else {
+        alert("No changes were made.");
+    }
 }
 // script.js
 
