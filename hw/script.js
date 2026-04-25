@@ -22,7 +22,7 @@ function changeRole() {
         
         // 3. Update the HTML element with the id 'role'
         document.getElementById("role").innerText = newRole;
-
+        document.getElementById('head1').style.fontsize="50px";
         // 4. Show a success message using an alert
         alert("Role updated successfully to: " + newRole);
     } else {
