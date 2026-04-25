@@ -13,8 +13,9 @@ let index = 0;
 } */
 
 function changeRole() {
+    let currentName = document.getElementById("role").innerText ;
     // 1. Ask the user for their new role using a prompt
-    let newRole = prompt("What is your new professional role?", "Full Stack Developer");
+    let newRole = prompt("What is your new professional role?", currentName );
 
     // 2. Check if the user entered something (and didn't hit cancel)
     if (newRole !== null && newRole !== "") {
