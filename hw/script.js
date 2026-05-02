@@ -13,6 +13,7 @@ let index = 0;
 } */
 
 function changeRole() {
+    debugger;
     let currentName = document.getElementById("role").innerText ;
     // 1. Ask the user for their new role using a prompt
     let newRole = prompt("What is your new professional role?", currentName );
