@@ -52,3 +52,45 @@ searchInput.addEventListener('keyup', function(event) {
         }
     });
 });
+
+function startAuth() {
+    const SECRET_PIN = "1234";
+    let inputPin = "";
+    let attempts = 0;
+    const maxAttempts = 3;
+    let messageElement = document.getElementById("access-message");
+
+    // 1. DO...WHILE LOOP 
+    // This runs at least once to get the first attempt from the user.
+    do {
+        inputPin = prompt("Please enter the 4-digit Secret PIN:");
+        attempts++;
+
+        if (inputPin === SECRET_PIN) {
+            break; // Exit immediately if correct
+        }
+
+        alert("Incorrect PIN. Attempt " + attempts + " of " + maxAttempts);
+
+    } while (attempts < 1 && inputPin !== SECRET_PIN);
+
+    // 2. WHILE LOOP
+    // If the first attempt was wrong, this handles the remaining limited tries.
+    while (inputPin !== SECRET_PIN && attempts < maxAttempts) {
+        inputPin = prompt("Access Denied. Try again:");
+        attempts++;
+        
+        if (inputPin !== SECRET_PIN && attempts < maxAttempts) {
+            alert("Remaining tries: " + (maxAttempts - attempts));
+        }
+    }
+
+    // Final Validation
+    if (inputPin === SECRET_PIN) {
+        messageElement.innerHTML = "✅ ACCESS GRANTED. Welcome back!";
+        messageElement.className = "success";
+    } else {
+        messageElement.innerHTML = "❌ SYSTEM LOCKED. Too many failed attempts.";
+        messageElement.className = "denied";
+    }
+}
