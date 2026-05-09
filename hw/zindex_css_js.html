@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 8: Z-Index Layer Toggle</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* Specific Styles for this Assignment */
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Using your submit-btn style for the toggles */
+        .toggle-btn {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background: #7dd3fc;
+        }
+
+        /* The Box where content appears - matched to your theme */
+        .content-box {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            margin-top: 10px;
+            border: 1px solid #334155;
+            background: #0f172a;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* All layers start hidden and stacked */
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; /* Hidden by default */
+            color: white;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+        }
+
+        /* Specific layer colors */
+        #layer1 { background-color: #f87171; } /* Tomato-ish */
+        #layer2 { background-color: #60a5fa; } /* Dodgerblue-ish */
+        #layer3 { background-color: #4ade80; } /* Green-ish */
+
+        /* The active class to show the layer */
+        .active {
+            display: flex !important; 
+            z-index: 5;               
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-main">
+        <h1>Layer Switcher 📑</h1>
+        <p>Mastering CSS Z-Index and Layering</p>
+    </div>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <h2>Interactive Z-Index Demo</h2>
+        <p style="margin-bottom: 20px; color: #94a3b8;">Click the buttons below to toggle between different layers using the <code>z-index</code> property.</p>
+
+        <div class="controls">
+            <button class="toggle-btn" onclick="show('layer1')">Show Red</button>
+            <button class="toggle-btn" onclick="show('layer2')">Show Blue</button>
+            <button class="toggle-btn" onclick="show('layer3')">Show Green</button>
+        </div>
+
+        <div class="content-box">
+            <div id="layer1" class="layer active">LAYER 1 (Red)</div>
+            <div id="layer2" class="layer">LAYER 2 (Blue)</div>
+            <div id="layer3" class="layer">LAYER 3 (Green)</div>
+        </div>
+    </div>
+
+    <div style="margin-top:30px;">
+        <a href="../assignments.html" class="btn">⬅ Back</a>
+        <a href="../index.html" class="btn" style="margin-left:10px;">🏠 Home</a>
+    </div>
+
+</section>
+
+<script>
+    function show(id) {
+        // 1. Hide all layers by removing the 'active' class
+        let layers = document.getElementsByClassName('layer');
+        for (let i = 0; i < layers.length; i++) {
+            layers[i].classList.remove('active');
+        }
+
+        // 2. Show only the one we want
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
