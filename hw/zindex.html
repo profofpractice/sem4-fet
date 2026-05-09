@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Z-Index Layer Toggle</title>
+    <style>
+        /* Container to keep things neat */
+        .container {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* The Box where content appears */
+        .content-box {
+            position: relative;
+            width: 300px;
+            height: 150px;
+            margin-top: 10px;
+            border: 2px solid #333;
+        }
+
+        /* All layers start hidden and stacked */
+        .layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: none; /* Hidden */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Specific layer styles */
+        #layer1 { background-color: tomato; }
+        #layer2 { background-color: dodgerblue; }
+        #layer3 { background-color: mediumseagreen; }
+
+        /* The magic class to show the layer */
+        .active {
+            display: flex !important; /* Shows the layer */
+            z-index: 5;               /* Brings to front */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h3>Simple Layer Switcher</h3>
+        
+        <!-- Buttons are outside the content box so they stay visible -->
+        <button onclick="show('layer1')">Show Red</button>
+        <button onclick="show('layer2')">Show Blue</button>
+        <button onclick="show('layer3')">Show Green</button>
+
+        <div class="content-box">
+            <div id="layer1" class="layer active">LAYER 1 (Red)</div>
+            <div id="layer2" class="layer">LAYER 2 (Blue)</div>
+            <div id="layer3" class="layer">LAYER 3 (Green)</div>
+        </div>
+    </div>
+
+    <script>
+        function show(id) {
+            // 1. Hide all layers by removing the 'active' class
+            let layers = document.getElementsByClassName('layer');
+            for (let i = 0; i < layers.length; i++) {
+                layers[i].classList.remove('active');
+            }
+
+            // 2. Show only the one we want
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
