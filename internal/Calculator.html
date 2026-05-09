@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 10: Circle Calculator</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .result-display {
+            margin-top: 20px;
+            padding: 15px;
+            background: #0f172a;
+            border: 1px solid #38bdf8;
+            border-radius: 8px;
+            color: #38bdf8;
+            font-family: monospace;
+            font-size: 1.1rem;
+            min-height: 50px;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero-container">
+    <nav>
+        <div class="logo">FrontEnd Pro</div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../assignments.html">Assignments</a></li>
+        </ul>
+    </nav>
+    <div class="hero-main">
+        <h1>Circle Calculator ⭕</h1>
+        <p>Calculate Area and Circumference</p>
+    </div>
+</header>
+
+<section class="container">
+    <div class="card">
+        <label>Enter Radius</label>
+        <input type="number" id="radiusInput" placeholder="e.g. 5" step="any">
+
+        <div class="btn-group">
+            <button class="submit-btn" onclick="handleCalculation('area')">Calculate Area</button>
+            <button class="submit-btn" onclick="handleCalculation('circum')">Calculate Circumference</button>
+        </div>
+
+        <div class="result-display" id="output">
+            Result will appear here...
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
