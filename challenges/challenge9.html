@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 9</title>
+    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 9: The Scope Breakdown</h2>
+    <p>Clicking the process button triggers a 'this.generateKey is not a function' terminal error inside the engine.</p>
+    <button id="scope-btn">Execute Core Pipeline</button>
+    <script>
+        const securityModule = {
+            key: "RE9NX1NFTEVDVE9SX0ZPVU5EXzgx", 
+            generateKey: function() {
+                alert("🏆 KEY: " + atob("Q09OVEVYVF9CT1VORF9TVUNDRVNTXzE0"));
+            }
+        };
+        try {
+            document.getElementById('scope-btn').addEventListener('click', securityModule.generateKey);
+        } catch(e) {}
+    </script>
+</body>
+</html>
