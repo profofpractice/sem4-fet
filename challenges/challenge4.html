@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 4</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; text-align: center; }
+        .container { display: flex; flex-wrap: nowrap; gap: 20px; background: #eee; padding: 20px; text-align: left; }
+        .card { min-width: 300px; background: white; padding: 20px; border: 1px solid #ccc; }
+        #victory-zone { display: none; margin-top: 30px; background: lightgreen; padding: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 4: Fix the Mobile Overflow</h2>
+    <p>Change into Mobile Responsive View (Ctrl+Shift+M). Notice how cards run off screen. Fix the flex wrap rule!</p>
+    <div class="container" id="main-layout">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+    </div>
+    <div id="victory-zone"></div>
+    <script>
+        setInterval(() => {
+            const layout = document.getElementById('main-layout');
+            if (window.getComputedStyle(layout).flexWrap === 'wrap') {
+                const vz = document.getElementById('victory-zone');
+                vz.innerText = "🏆 KEY: " + atob("RkxFWF9XUkFQUElOR19NT0JJXzQ0");
+                vz.style.display = 'block';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
