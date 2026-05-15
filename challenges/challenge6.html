@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 6</title>
+    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 6: The Invisible Node</h2>
+    <p>There is a hidden paragraph container right inside this wrapper block. Find it and force it back into view!</p>
+    <div class="wrapper">
+        <p id="ghost-text" style="display: none !important; color: red; font-weight: bold; font-size: 24px;"></p>
+    </div>
+    <script>
+        const _0x6b = "🏆 KEY: " + atob("RElTUExBWV9OT05FX0VYUE9TRURfNTU=");
+        document.getElementById('ghost-text').innerText = _0x6b;
+        setInterval(() => {
+            const ghost = document.getElementById('ghost-text');
+            if(window.getComputedStyle(ghost).display !== 'none') {
+                ghost.style.color = "green";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
