@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Challenge 2: Invisible Wall</title>
+    <title>Challenge 2</title>
     <style>
         body { font-family: sans-serif; text-align: center; padding: 50px; }
         button { background: #28a745; color: white; border: none; padding: 15px 30px; font-size: 18px; border-radius: 5px; cursor: pointer; }
-        /* BUG: This transparent overlay steals the click event */
         .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 999; background: transparent; }
     </style>
 </head>
@@ -15,10 +14,9 @@
     <h2>Challenge 2: The Click Thief</h2>
     <p>Try to click the button below. It feels like an invisible wall is blocking you.</p>
     <button id="target-btn" onclick="triggerWin()">Claim Points</button>
-
     <script>
         function triggerWin() {
-            alert("🏆 VICTORY KEY: Z_INDEX_SHADOW_22");
+            alert("🏆 KEY: " + atob("Wl9JTkRFWF9TSEFET1dfMjI="));
         }
     </script>
 </body>
