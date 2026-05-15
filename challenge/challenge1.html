@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 1: The Broken Click</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; background: #f4f6f9; }
+        .box { background: white; padding: 30px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Challenge 1: Click the Button to Register</h2>
+        <p>This button is completely unresponsive. Find out why!</p>
+        <button id="submit-form">Register Now</button> 
+    </div>
+
+    <script>
+        // Core Logic (Simulating broken codebase)
+        try {
+            document.getElementById('submit-btn').addEventListener('click', () => {
+                alert("🏆 VICTORY KEY: DOM_SELECTOR_FOUND_81");
+            });
+        } catch(e) {
+            console.error("Runtime Exception: Cannot read properties of null (reading 'addEventListener')");
+        }
+
+        // Hidden Automation Validator Engine
+        setInterval(() => {
+            const btn = document.getElementById('submit-btn');
+            if (btn && !btn.onclick && btn.id === 'submit-btn') {
+                btn.onclick = () => alert("🏆 VICTORY KEY: DOM_SELECTOR_FOUND_81");
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
