@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 7</title>
+    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 7: The Strict Equality Gap</h2>
+    <p>Check your Console logs. The score evaluator is stuck on type validation checks.</p>
+    <button onclick="checkScore()">Process Verification</button>
+    <script>
+        let systemScore = "100";
+        function checkScore() {
+            if (systemScore === 100) {
+                alert("🏆 KEY: " + atob("VFlQRV9DSEVDS19QQVNTRURfMDc="));
+            } else {
+                console.warn("Validation Rejected: System score data type is String, expected Number.");
+            }
+        }
+    </script>
+</body>
+</html>
