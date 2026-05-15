@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 5: Unlock the Checkout Gate</h2>
+    <p>The system thinks you haven't filled the form. Strip away the lockout directly from the element attributes tree!</p>
+    <button id="lock-btn" disabled style="padding:15px; font-size:16px; cursor:pointer;">Complete Purchase</button>
+    <script>
+        document.getElementById('lock-btn').addEventListener('click', () => {
+            if(!document.getElementById('lock-btn').hasAttribute('disabled')) {
+                alert("🏆 KEY: " + atob("QVRUUklCVVRFX1NUUklQUEVEXzEw"));
+            }
+        });
+    </script>
+</body>
+</html>
