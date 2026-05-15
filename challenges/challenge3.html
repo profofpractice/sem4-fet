@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 3</title>
+    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+</head>
+<body>
+    <h2>Challenge 3: The Missing Leaderboard</h2>
+    <p>Open your Console! A critical spelling mistake is breaking our render loop.</p>
+    <div id="display"></div>
+    <script>
+        const data = ["Alice", "Bob", "Charlie"];
+        function render() {
+            for(let i=0; i < data.lenth; i++) {
+                document.getElementById('display').innerHTML += data[i];
+            }
+        }
+        try { render(); } catch(err) { console.error(err); }
+        window.getSecretKey = function() {
+            return "🏆 KEY: " + atob("QVJSQVlfTEVOR1RIX0ZJWEVEXzkz");
+        };
+    </script>
+</body>
+</html>
