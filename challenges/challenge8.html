@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 8</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: white; padding: 50px; }
+        .secret-box { padding: 20px; border: 2px dashed #ccc; background: #fff; font-size: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+  <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
+    <h2>Challenge 8: Read the Invisible Text</h2>
+    <p>The solution container below contains the key, but it has been systematically zeroed out using high-priority text colors!</p>
+    <div class="secret-box" id="blind-box" style="color: white !important;">
+        <span id="content-span"></span>
+    </div>
+    <script>
+        document.getElementById('content-span').innerText = "🏆 KEY: " + atob("S0VZX0NPTlRSQVNUM19NQVBURVJfOTI=");
+    </script>
+</body>
+</html>
