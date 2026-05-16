@@ -6,7 +6,7 @@
     <style>
         body { font-family: sans-serif; text-align: center; padding: 50px; }
         .hidden-box { padding: 20px; border: 2px dashed #999; margin: 20px auto; max-width: 400px; background: #fff3cd; }
-        /* BUG: Opacity is 0, making the content invisible but still occupying space in the DOM */
+     
         #secret-text { opacity: 0; font-size: 22px; font-weight: bold; color: #856404; transition: opacity 0.5s; }
     </style>
 </head>
@@ -14,10 +14,13 @@
     <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
 
     <h2>Challenge 9: The Cloaked Key</h2>
-    <p>The key is sitting right inside the box below, but its visibility matrix has been completely flattened. Bring it back to light!</p>
+
     
     <div class="hidden-box">
-        <p id="secret-text">🏆 KEY: OPACITY_REVEALED_99</p>
+       <p id="secret-text" style="font-size: 22px; font-weight: bold; color: #856404;"></p>
+<script>
+    document.getElementById('secret-text').innerText = "🏆 KEY: " + atob("T1BBQ0lUWV9SRVZFQUxFRF85OQ==");
+</script>
     </div>
 </body>
 </html>
