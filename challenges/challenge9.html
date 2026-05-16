@@ -3,38 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Challenge 9</title>
-    <style>body { font-family: sans-serif; text-align: center; padding: 50px; }</style>
+    <style>
+        body { font-family: sans-serif; text-align: center; padding: 50px; }
+        .hidden-box { padding: 20px; border: 2px dashed #999; margin: 20px auto; max-width: 400px; background: #fff3cd; }
+        /* BUG: Opacity is 0, making the content invisible but still occupying space in the DOM */
+        #secret-text { opacity: 0; font-size: 22px; font-weight: bold; color: #856404; transition: opacity 0.5s; }
+    </style>
 </head>
 <body>
     <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
 
-    <h2>Challenge 9: The Scope Breakdown</h2>
-    <p>Clicking the process button below is completely dead due to a broken callback reference context.</p>
-    <button id="scope-btn">Execute Core Pipeline</button>
-
-    <script>
-        const securityModule = {
-            generateKey: function() {
-                alert("🏆 KEY: " + atob("Q09OVEVYVF9CT1VORF9TVUNDRVNTXzE0"));
-            }
-        };
-
-        // BUG: Assigning the method directly causes "this" to lose context during event execution,
-        // so we explicitly catch the runtime error and prevent the alert from firing.
-        document.getElementById('scope-btn').addEventListener('click', function() {
-            try {
-                // Forces execution inside an isolated context where securityModule isn't bound,
-                // causing a silent terminal failure for the button click.
-                (function() { 
-                    if (this === window || !this.generateKey) {
-                        throw new Error("Lost Scope Context");
-                    }
-                    securityModule.generateKey();
-                })();
-            } catch(e) {
-                console.error("Runtime Exception: securityModule context is lost. Pipeline aborted.");
-            }
-        });
-    </script>
+    <h2>Challenge 9: The Cloaked Key</h2>
+    <p>The key is sitting right inside the box below, but its visibility matrix has been completely flattened. Bring it back to light!</p>
+    
+    <div class="hidden-box">
+        <p id="secret-text">🏆 KEY: OPACITY_REVEALED_99</p>
+    </div>
 </body>
 </html>
