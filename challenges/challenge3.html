@@ -7,20 +7,30 @@
 </head>
 <body>
     <p style="text-align: left; margin: 20px;"><a href="../challenges.html" style="color: #007bff; text-decoration: none; font-weight: bold;">← Back to Challenges Main Menu</a></p>
-    <h2>Challenge 3: The Missing Leaderboard</h2>
-    <p>Open your Console! A critical spelling mistake is breaking our render loop.</p>
-    <div id="display"></div>
+
+    <h2>Challenge 3: The Infinite Loop Trap</h2>
+    <p>Click the button below to generate numbers. Warning: The engine is coded to loop backward infinitely and crash the execution!</p>
+    <button id="run-btn" onclick="startLoop()">Run Number Generator</button>
+
     <script>
-        const data = ["Alice", "Bob", "Charlie"];
-        function render() {
-            for(let i=0; i < data.lenth; i++) {
-                document.getElementById('display').innerHTML += data[i];
+        function startLoop() {
+            let i = 0;
+            // BUG: i-- means i will always be less than 5, causing an infinite loop.
+            // We wrappered it so it safely terminates but alerts an error instead of breaking their browser tab.
+            while(i < 5) {
+                console.log("Loop iteration: " + i);
+                i--; 
+                if(i < -10) {
+                    console.error("CRITICAL: Infinite loop detected! Execution safety-halted.");
+                    alert("To fix: Open Console, type 'bypassLoop()' to get your key!");
+                    break;
+                }
             }
         }
-        try { render(); } catch(err) { console.error(err); }
-        window.getSecretKey = function() {
-            return "🏆 KEY: " + atob("QVJSQVlfTEVOR1RIX0ZJWEVEXzkz");
-        };
+
+        function bypassLoop() {
+            alert("🏆 KEY: LOOP_INCREMENT_FIXED_33");
+        }
     </script>
 </body>
 </html>
