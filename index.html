@@ -60,5 +60,12 @@
     </section>
    <script src="js/assignments.js"></script>
     <script src="script.js"></script>
+    <script>
+          function cb(response) {
+      document.getElementById('visits').innerText = response.value;
+      }
+        </script>
+<script async src="https://api.countapi.xyz/hit/profofpractice/visits?callback=cb"></script>
 </body>
+    <footer><p>This page has been viewed <span id="visits">0</span> times.</p></footer>
 </html>
